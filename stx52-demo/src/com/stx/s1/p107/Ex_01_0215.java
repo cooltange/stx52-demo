@@ -11,7 +11,7 @@ package com.stx.s1.p107;
 public class Ex_01_0215 {
 	public static void main(String[] args) {
 
-		System.out.println(getDays(22, 2013));
+		System.out.println(getDays(12, 2013));
 
 	}
 
