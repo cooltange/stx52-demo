@@ -32,7 +32,7 @@ public class P185DogRun {
 	static void test(P185Dog dog) {
 		P185Dog p185Dog = new P185Dog();
 		p185Dog.setName("狗熊");
-		
+		// 只是改变了"副本"的引用值
 		dog = p185Dog;
 	}
 }
