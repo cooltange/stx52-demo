@@ -3,7 +3,7 @@ package com.stx.s1.p172;
 /**
  * 静态变量(类变量)与实例变量 区别
  * 
- * @author stx4
+ * @author getan
  *
  */
 class Person {
@@ -17,12 +17,12 @@ class Person {
 /**
  * 静态变量(类变量)与实例变量 区别 运行类
  * 
- * @author stx4
+ * @author getan
  *
  */
 public class P172 {
 	public static void main(String[] args) {
-		// Person类已经初始化了，则eyeNum变量起作用了，输出0
+		// Person类已经初始化了，则eyeNum变量起作用了，输出?
 		//System.out.println("Person的eyeNum类变量值:" + Person.eyeNum);
 		
 		// 创建Person对象 p1
