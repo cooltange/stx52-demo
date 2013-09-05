@@ -12,7 +12,7 @@ public class P167 {
 		User user1 = new User();
 
 		// 用户类 name属性被private(私有),以下操作无效(编译失败)
-		// user.name = "猪八戒";
+		// user1.name = "猪八戒";
 
 		user1.setName("猪八戒");
 
