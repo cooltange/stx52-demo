@@ -8,7 +8,7 @@ package com.stx.s1.p203;
  */
 public class PhoneBill extends Bill {
 	PhoneBill() {
-		name = "PhoneBill";
+		name = "电话费用详细账单";
 		amount = 200;
 	}
 

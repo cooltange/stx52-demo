@@ -9,7 +9,7 @@ package com.stx.s1.p203;
 public class GasBill extends Bill {
 
 	GasBill() {
-		name = "GasBill";
+		name = "燃气费用详细账单";
 		amount = 100;
 
 	}
