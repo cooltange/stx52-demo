@@ -18,5 +18,8 @@ public class Apple extends Fruit {
 		this.color = color;
 	}
 	
+	public void info() {
+		System.out.println("我是一个苹果！重" + weight + "g！");
+	}
 
 }

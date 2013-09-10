@@ -3,7 +3,7 @@ package com.stx.s1.p137;
 /**
  * 取得字符串的子串
  * 
- * @author stx4
+ * @author getan
  *
  */
 public class P137 {

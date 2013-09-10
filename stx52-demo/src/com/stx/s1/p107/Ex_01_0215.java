@@ -5,7 +5,7 @@ package com.stx.s1.p107;
  * 
  * 通过年月获得该月最大天数
  * 
- * @author stx4
+ * @author getan
  * 
  */
 public class Ex_01_0215 {

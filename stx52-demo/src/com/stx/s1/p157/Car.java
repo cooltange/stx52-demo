@@ -3,7 +3,7 @@ package com.stx.s1.p157;
 /**
  * 汽车类
  * 
- * @author stx4
+ * @author getan
  *
  */
 public class Car {
