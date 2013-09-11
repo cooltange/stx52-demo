@@ -18,6 +18,7 @@ public class Apple extends Fruit {
 		this.color = color;
 	}
 	
+	@Override //方法重写(覆盖)
 	public void info() {
 		System.out.println("我是一个苹果！重" + weight + "g！");
 	}

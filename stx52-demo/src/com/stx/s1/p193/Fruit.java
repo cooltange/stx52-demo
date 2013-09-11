@@ -9,7 +9,7 @@ package com.stx.s1.p193;
 public class Fruit {
 	public double weight;
 
-	private static void info() {
+	public void info(){
 		System.out.println("我是一个水果！重");
 	}
 }
