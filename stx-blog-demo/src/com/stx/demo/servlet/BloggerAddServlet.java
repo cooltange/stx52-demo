@@ -48,8 +48,8 @@ public class BloggerAddServlet extends HttpServlet {
 		blogger.setContent(content);
 		
 		// TODO
-		blogger.setUserId(1);
-		blogger.setCatId(1);
+		blogger.setUsid(1);
+		blogger.setCid(1);
 		
 		try {
 			dao.addBlogger(blogger);

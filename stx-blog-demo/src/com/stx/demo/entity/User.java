@@ -12,98 +12,94 @@ import java.util.Date;
  */
 public class User {
 	// 用户编号
-	private int us_id;
+	private int usid;
 	// 用户名
-	private String us_name;
+	private String uname;
 	// 博客名
-	private String us_blogname;
+	private String blogname;
 	// 用户密码
-	private String us_password;
+	private String password;
 	// 用户邮箱
-	private String us_email;
+	private String email;
 	// 博客描述
-	private String us_description;
+	private String description;
 	// 创建时间
-	private Date us_createtime;
+	private Date createtime;
 	// 最后修改时间
-	private Date us_lastmodifytime;
+	private Date lastmodifytime;
 	// 是否删除标记
-	private String us_delflag;
+	private String delflag;
 
-	/*
-	 * 生成us_user表中的GET、SET方法
-	 */
-
-	public int getUid() {
-		return us_id;
+	public int getUsid() {
+		return usid;
 	}
 
-	public void setUid(int uid) {
-		this.us_id = uid;
+	public void setUsid(int usid) {
+		this.usid = usid;
 	}
 
 	public String getUname() {
-		return us_name;
+		return uname;
 	}
 
 	public void setUname(String uname) {
-		this.us_name = uname;
+		this.uname = uname;
 	}
 
 	public String getBlogname() {
-		return us_blogname;
+		return blogname;
 	}
 
 	public void setBlogname(String blogname) {
-		this.us_blogname = blogname;
+		this.blogname = blogname;
 	}
 
 	public String getPassword() {
-		return us_password;
+		return password;
 	}
 
 	public void setPassword(String password) {
-		this.us_password = password;
+		this.password = password;
 	}
 
 	public String getEmail() {
-		return us_email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		this.us_email = email;
+		this.email = email;
 	}
 
 	public String getDescription() {
-		return us_description;
+		return description;
 	}
 
 	public void setDescription(String description) {
-		this.us_description = description;
+		this.description = description;
+	}
+
+	public Date getCreatetime() {
+		return createtime;
+	}
+
+	public void setCreatetime(Date createtime) {
+		this.createtime = createtime;
+	}
+
+	public Date getLastmodifytime() {
+		return lastmodifytime;
+	}
+
+	public void setLastmodifytime(Date lastmodifytime) {
+		this.lastmodifytime = lastmodifytime;
 	}
 
 	public String getDelflag() {
-		return us_delflag;
+		return delflag;
 	}
 
 	public void setDelflag(String delflag) {
-		this.us_delflag = delflag;
-	}
-
-	public Date getUs_createtime() {
-		return us_createtime;
-	}
-
-	public void setUs_createtime(Date us_createtime) {
-		this.us_createtime = us_createtime;
-	}
-
-	public Date getUs_lastmodifytime() {
-		return us_lastmodifytime;
-	}
-
-	public void setUs_lastmodifytime(Date us_lastmodifytime) {
-		this.us_lastmodifytime = us_lastmodifytime;
+		this.delflag = delflag;
 	}
 
 }

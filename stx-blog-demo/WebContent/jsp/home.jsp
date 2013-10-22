@@ -74,7 +74,7 @@
 					<div class="row well">
 						<div class="well">
 							<div class="span4"><h4><%=blogger.getTitle()%></h4></div>
-							<div class="span3 offset5"><%=blogger.getCreateTime().toString().substring(0,10)%></div>
+							<div class="span3 offset5"><%=blogger.getCreatetime().toString().substring(0,10)%></div>
 						</div>
 						<div class="well">
 							<%=blogger.getContent() %>

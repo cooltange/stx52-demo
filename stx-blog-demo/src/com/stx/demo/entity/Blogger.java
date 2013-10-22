@@ -12,98 +12,98 @@ import java.util.Date;
  */
 public class Blogger {
 	// 博文ID
-	private int bl_id;
+	private int bid;
 	// 用户ID
-	private int us_id;
+	private int usid;
 	// 博文标题
-	private String bl_title;
+	private String title;
 	// 博文内容
-	private String bl_content;
+	private String content;
 	// 分类ID
-	private int ca_id;
+	private int cid;
 
 	// 公开程度A=公开，M=自已可见，H=好友可见
-	private String bl_levels;
+	private String blevel;
 
 	// 是否可评论 Y/N
-	private String bl_readable;
+	private String readable;
 
 	// 创建时间
-	private Date bl_createtime;
+	private Date createtime;
 
 	// 是否删除标志 Y/N
-	private String bl_delflag;
+	private String delflag;
 
-	public int getBlogId() {
-		return bl_id;
+	public int getBid() {
+		return bid;
 	}
 
-	public void setBlogId(int blogId) {
-		this.bl_id = blogId;
+	public void setBid(int bid) {
+		this.bid = bid;
 	}
 
-	public int getUserId() {
-		return us_id;
+	public int getUsid() {
+		return usid;
 	}
 
-	public void setUserId(int userId) {
-		this.us_id = userId;
+	public void setUsid(int usid) {
+		this.usid = usid;
 	}
 
 	public String getTitle() {
-		return bl_title;
+		return title;
 	}
 
 	public void setTitle(String title) {
-		this.bl_title = title;
+		this.title = title;
 	}
 
 	public String getContent() {
-		return bl_content;
+		return content;
 	}
 
 	public void setContent(String content) {
-		this.bl_content = content;
+		this.content = content;
 	}
 
-	public int getCatId() {
-		return ca_id;
+	public int getCid() {
+		return cid;
 	}
 
-	public void setCatId(int catId) {
-		this.ca_id = catId;
+	public void setCid(int cid) {
+		this.cid = cid;
 	}
 
-	public String getLevel() {
-		return bl_levels;
+	public String getBlevel() {
+		return blevel;
 	}
 
-	public void setLevel(String level) {
-		this.bl_levels = level;
+	public void setBlevel(String blevel) {
+		this.blevel = blevel;
 	}
 
 	public String getReadable() {
-		return bl_readable;
+		return readable;
 	}
 
 	public void setReadable(String readable) {
-		this.bl_readable = readable;
+		this.readable = readable;
 	}
 
-	public Date getCreateTime() {
-		return bl_createtime;
+	public Date getCreatetime() {
+		return createtime;
 	}
 
-	public void setCreateTime(Date createTime) {
-		this.bl_createtime = createTime;
+	public void setCreatetime(Date createtime) {
+		this.createtime = createtime;
 	}
 
-	public String getDelFlag() {
-		return bl_delflag;
+	public String getDelflag() {
+		return delflag;
 	}
 
-	public void setDelFlag(String delFlag) {
-		this.bl_delflag = delFlag;
+	public void setDelflag(String delflag) {
+		this.delflag = delflag;
 	}
 
 }

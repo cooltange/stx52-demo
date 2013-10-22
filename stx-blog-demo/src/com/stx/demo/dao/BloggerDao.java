@@ -35,35 +35,35 @@ public class BloggerDao {
 		// 执行查询操作返回查询结果集对象
 		ResultSet rs = st.executeQuery(sql);
 
-		// 创建博客对象(用于存放从数据库查询出博客的信息)
+		// 创建博文对象(用于存放从数据库查询出博文的信息列表)
 		ArrayList<Blogger> bloggerList = new ArrayList<Blogger>();
 
 		while (rs.next()) {
-			// 创建博客对象
+			// 创建博文对象
 			Blogger blogger = new Blogger();
 
-			// 将数据库记录的每一个字段的值 赋值给 "博客对象"对应的属性.
-			blogger.setBlogId(rs.getInt("bid"));
-			blogger.setUserId(rs.getInt("usid"));
+			// 将数据库记录的每一个字段的值 赋值给 "博文对象"对应的属性.
+			blogger.setBid(rs.getInt("bid"));
+			blogger.setUsid(rs.getInt("usid"));
 			// bloggers.setUs_blogname(rs.getString("blogname"));
 			blogger.setTitle(rs.getString("title"));
 
 			// 如果博文内容大于200字节就截取
 			String contents = rs.getString("content");// 博文内容
-			// 处理后的文章内容
+			// 处理后的博文内容
 			String content = null;
 			if (contents.length() > 100) {
-				content = contents.substring(0, 100);// 截取文章内容的前100个字符
+				content = contents.substring(0, 100);// 截取博文内容的前100个字符
 			} else {
 				content = contents;
 			}
 
 			// 将每个字段的值赋给实体对象中对应的属性
 			blogger.setContent(content);
-			blogger.setCatId(rs.getInt("cid"));
-			blogger.setLevel(rs.getString("blevel"));
+			blogger.setCid(rs.getInt("cid"));
+			blogger.setBlevel(rs.getString("blevel"));
 			blogger.setReadable(rs.getString("readable"));
-			blogger.setCreateTime(rs.getTimestamp("createtime"));
+			blogger.setCreatetime(rs.getTimestamp("createtime"));
 
 			// 将该博文对象放入博文列表对象中
 			bloggerList.add(blogger);
@@ -89,10 +89,10 @@ public class BloggerDao {
 
 		PreparedStatement ps = con.prepareStatement("insert into tbl_blogger(bid, usid, title, content, cid) values(seq_blogger.nextval, ?, ?, ?, ?);");
 
-		ps.setInt(1, blogger.getUserId());
+		ps.setInt(1, blogger.getUsid());
 		ps.setString(2, blogger.getTitle());
 		ps.setString(3, blogger.getContent());
-		ps.setInt(4, blogger.getCatId());
+		ps.setInt(4, blogger.getCid());
 
 		ps.executeUpdate();
 
