@@ -60,8 +60,7 @@ public class BlogHomeServlet extends HttpServlet {
 		// 将查询结果保存到request对象中
 		request.setAttribute("bloggerList", bloggerList);
 
-		// 通过ServletContext对象获取RequestDispatcher对象
-		// 通过ServletContext对象获得的路径是 相对Web应用根的路径,即网站的绝对根路径.
+		// 通过ServletContext对象获取RequestDispatcher对象(绝对路径).
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/jsp/home.jsp");
 
 		// 请求转发给博客首页(/jsp/home.jsp)

@@ -40,13 +40,13 @@ public class BloggerDao {
 
 		while (rs.next()) {
 			// 创建博客对象
-			Blogger bloggers = new Blogger();
+			Blogger blogger = new Blogger();
 
 			// 将数据库记录的每一个字段的值 赋值给 "博客对象"对应的属性.
-			bloggers.setBlogId(rs.getInt("bid"));
-			bloggers.setUserId(rs.getInt("usid"));
+			blogger.setBlogId(rs.getInt("bid"));
+			blogger.setUserId(rs.getInt("usid"));
 			// bloggers.setUs_blogname(rs.getString("blogname"));
-			bloggers.setTitle(rs.getString("title"));
+			blogger.setTitle(rs.getString("title"));
 
 			// 如果博文内容大于200字节就截取
 			String contents = rs.getString("content");// 博文内容
@@ -59,14 +59,14 @@ public class BloggerDao {
 			}
 
 			// 将每个字段的值赋给实体对象中对应的属性
-			bloggers.setContent(content);
-			bloggers.setCatId(rs.getInt("cid"));
-			bloggers.setLevel(rs.getString("blevel"));
-			bloggers.setReadable(rs.getString("readable"));
-			bloggers.setCreateTime(rs.getTimestamp("createtime"));
+			blogger.setContent(content);
+			blogger.setCatId(rs.getInt("cid"));
+			blogger.setLevel(rs.getString("blevel"));
+			blogger.setReadable(rs.getString("readable"));
+			blogger.setCreateTime(rs.getTimestamp("createtime"));
 
 			// 将该博文对象放入博文列表对象中
-			bloggerList.add(bloggers);
+			bloggerList.add(blogger);
 		}
 
 		// 释放数据库连接资源
