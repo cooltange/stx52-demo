@@ -8,13 +8,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.stx.demo.dao.BloggerDao;
 import com.stx.demo.entity.Blogger;
 
 /**
- * 博客首页 Servlet类
+ * 博客首页显示 Servlet类
  * 
  * @author getan
  * 
@@ -33,7 +32,7 @@ public class BlogHomeServlet extends HttpServlet {
 	 */
 
 	public void init() throws ServletException {
-		// 初始化学生Dao对象
+		// 初始化博文Dao对象
 		dao = new BloggerDao();
 	}
 
