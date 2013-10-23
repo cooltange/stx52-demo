@@ -65,12 +65,16 @@
 				</ul>
 				<div class="hero-unit">
 					<%
+					// 从request对象中获取BlogHomeServlet中传过来的博文列表对象
 					ArrayList<Blogger> bloggerList = (ArrayList<Blogger>) request.getAttribute("bloggerList");
+					// 判断博文列表对象是否为空
 					if (bloggerList != null) {
 					%>
 					<%
+						// 遍历博文列表以显示最新更新的博文 
 						for (Blogger blogger : bloggerList) {
 					%>
+					<!-- 博文列表开始 -->
 					<div class="row well">
 						<div class="well">
 							<div class="span4"><h4><%=blogger.getTitle()%></h4></div>
@@ -81,6 +85,7 @@
 						</div>
 						<div class="span2"><a class="btn btn-primary" href="#"> 查看全文 » </a></div>
 					</div>
+					<!-- 博文列表结束 -->
 					<%
 						}
 					}
