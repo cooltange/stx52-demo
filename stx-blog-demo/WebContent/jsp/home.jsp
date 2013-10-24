@@ -1,6 +1,5 @@
 ﻿<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@page import="com.stx.demo.entity.User"%>
-<%@page import="com.stx.demo.entity.User"%>
 <%@page import="com.stx.demo.entity.Blogger"%>
 <%@page import="com.stx.demo.dao.BloggerDao"%>
 <%@page import="java.util.ArrayList"%>
@@ -44,20 +43,31 @@
 		</div>
 	</div>
 	<div class="container-fluid">
+		${message}
 		<div class="row-fluid">
 			<div class="span3">
-				<form>
-					<div class="control-group">
-						<label for="username">用户名</label> 
-						<input type="text" id="username" name="username" >
-					</div>
-					<div class="control-group">
-						<label for="password">密码</label> 
-						<input type="password" name="password" >
-					</div>
-					<a class="btn btn-primary" href="#"> 登录 </a> 
-					<a class="btn btn-primary" href="#"> 注册 </a>
-				</form>
+				<% 
+					// 从会话对象中获取当前登陆用户对象
+					User user = (User)session.getAttribute("currentUser");
+					// 判断用户是否登陆成功
+					if(user == null){// 未成功时需仍显示登陆框
+				%>
+					<form action="<%=request.getContextPath()%>/login" method="post">
+						<div class="control-group">
+							<label for="username">用户名</label> 
+							<input type="text" id="username" name="username" >
+						</div>
+						<div class="control-group">
+							<label for="password">密码</label> 
+							<input type="password" name="password" >
+						</div>
+						<input class="btn btn-primary" type="submit" value="登陆"/> 
+						<a class="btn btn-primary" href="#"> 注册 </a>
+					</form>
+				<% }else{ %>
+					欢迎您! <%=user.getUname()%><br/>
+					您的博客名是:<%=user.getBlogname()%>
+				<%} %>
 			</div>
 			<div class="span9">
 				<ul class="nav nav-tabs">
