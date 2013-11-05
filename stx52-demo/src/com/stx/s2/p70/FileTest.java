@@ -14,7 +14,7 @@ public class FileTest
 		throws IOException
 	{
 		// 以当前路径来创建一个File对象
-		File file = new File("."); 
+		File file = new File("d:/"); 
 		// 直接获取文件名，输出一点
 		System.out.println(file.getName());
 		// 获取相对路径的父路径可能出错，下面代码输出null
