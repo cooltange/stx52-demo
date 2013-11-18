@@ -62,7 +62,7 @@
 							<input type="password" name="password" >
 						</div>
 						<input class="btn btn-primary" type="submit" value="登陆"/> 
-						<a class="btn btn-primary" href="#"> 注册 </a>
+						<a class="btn btn-primary" href="<%=request.getContextPath()%>/jsp/register.jsp"> 注册 </a>
 					</form>
 				<% }else{ %>
 					欢迎您! <%=user.getUname()%><br/>
